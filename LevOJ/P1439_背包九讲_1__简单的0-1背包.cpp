@@ -43,6 +43,7 @@ int volume[N];      //物品的体积
 int value[N];       //物品的价值
 int ans;            //结果
 int dpans[N][Vmax]; //解矩阵dp_ans
+
 int main()
 {
     //读取数据

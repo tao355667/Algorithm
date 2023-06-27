@@ -34,7 +34,7 @@ int n; //游戏数目
 int m; //初始钱
 struct game
 {
-    int time; //活动消耗多少时间
+    int time; //活动截止时间
     int subm; //活动消耗多少钱
 };
 game g[N];

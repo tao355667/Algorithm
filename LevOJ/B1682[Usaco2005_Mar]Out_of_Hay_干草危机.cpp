@@ -70,11 +70,11 @@ void prim()
     for (int kk = 1; kk <= n - 1; kk++)
     {
         //找到closedge[]中dist最小的结点，更新visited
-        int min_dist = INF;
-        int min_index = -1;
+        int min_dist = INF; //对应的边长
+        int min_index = -1; //结点下标
         for (int j = 1; j <= n; j++)
         {
-            if (!visited[j] && closedge[j].dist < min_dist)
+            if (!visited[j] && closedge[j].dist < min_dist) //结点没有确定&&距离更小的结点
             {
                 min_dist = closedge[j].dist;
                 min_index = j;

@@ -36,19 +36,19 @@ n 个整数，A1,A2,A3,...,An
 #include <algorithm>
 const int N = 300010;
 using namespace std;
-int n, k;       //元素个数，要删除的数
-int base = 1;   //小于下标值的最大2的次方值
-int a[N], d[N]; //存储元素，删除每个元素时需要的附带操作
-int sum, ex;    //删除元素的次数，需要的最大附带操作数目
+int n, k;       // 元素个数，要删除的数
+int base = 1;   // 小于下标值的最大2的次方值
+int a[N], d[N]; // 存储元素，删除每个元素时需要的附带操作
+int sum, ex;    // 删除元素的次数，需要的最大附带操作数目
 int main()
 {
-    //读数
+    // 读数
     cin >> n >> k;
     for (int i = 1; i <= n; i++)
     {
         cin >> a[i];
     }
-    //题解
+    // 题解
     for (int i = 1; i <= n; i++)
     {
         if (i > base)
@@ -60,17 +60,17 @@ int main()
             if (base > i)
             {
                 base /= 2;
-            }      //此时base<=i
-            sum++; //删除了几次元素
+            }      // 此时base<=i
+            sum++; // 删除了几次元素
             // i-base：还需要删除几次
-            // f-1：删除这个数“之前”进行了几次删除操作
-            //若i-base<=f-1说明当前面删除时，后面的数会向前移到正确位置，可以执行删除操作
-            //若i-base>f-1说明需要额外的操作数量，值为i-base-(f-1)
+            // sum-1：删除这个数“之前”进行了几次删除操作
+            // 若i-base<=sum-1说明当前面删除时，后面的数会向前移到正确位置，可以执行删除操作
+            // 若i-base>sum-1说明需要额外的操作数量，值为i-base-(sum-1)
             d[sum] = i - base - sum + 1;
             ex = max(ex, d[sum]);
         }
     }
-    //输出答案
+    // 输出答案
     cout << sum + ex << endl;
     return 0;
 }

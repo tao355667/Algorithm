@@ -53,7 +53,7 @@ void my_solve()
             lqm++;
             continue;
         }
-        //两端田马都没齐马快
+        //两端田马都没齐马快（田马<=齐马）
         if (tm[ltm] < qm[rqm])
         { //下等马当炮灰
             ans -= 200;

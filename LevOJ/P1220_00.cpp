@@ -28,14 +28,14 @@ int ans;                 //存储最后的答案
 bool judge(int x, int y) //用于判断这个地方能否放置皇后
 {
     int i, j;
-    for (j = 1; j <= n; j++)
+    for (j = 1; j <= n; j++)//不能同一列
     {
         if (arr[j][y])
             return false;
     }
     for (i = 1; i <= n; i++)
     {
-        for (j = 1; j <= n; j++)
+        for (j = 1; j <= n; j++)//不能等腰三角形
         {
             if (abs(x - i) == abs(y - j) && arr[i][j] == 1)
                 return false;
