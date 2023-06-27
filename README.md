@@ -1,2 +1,11 @@
 # Algorithm
-To practice the algorithm
+
+学习算法
+
+包括
+
+- 程序为C/C++
+- 《算法设计与分析》课程学习内容
+- levOJ（学校的OJ）上的课后习题
+- 其他Oj上的题
+- 一些算法问题
