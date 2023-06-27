@@ -69,7 +69,7 @@ void floyd()
             { //遍历结点
 
                 // G[i][j] = min(G[i][j], G[i][v] + G[v][j]); //弗洛伊德，对此步骤修改，以解决此问题
-                int mm = max(G[i][v], G[v][j]); //经过结点v，从i到j最长的一段路径
+                int mm = max(G[i][v], G[v][j]); //经过结点v，从i到j的路径中，最长的一段
                 G[i][j] = min(G[i][j], mm);
             }
         }
