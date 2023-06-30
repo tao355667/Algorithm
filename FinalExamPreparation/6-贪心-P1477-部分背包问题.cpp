@@ -30,7 +30,7 @@ int main()
         int ans = 0;
         for (int i = 1; i <= n; i++)
         {
-            if (g[i].m < t)
+            if (g[i].m <= t)
             {
                 ans += g[i].v;
                 t -= g[i].m;
@@ -38,7 +38,7 @@ int main()
             else
             {
                 if (t > 0)
-                {
+                { // 有点空间，装一部分
                     ans += int(t * g[i].mv);
                     t = 0;
                     break;
